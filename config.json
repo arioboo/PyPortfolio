@@ -1,0 +1,33 @@
+{
+    "main": {
+        "make_log_returns": true,
+        "make_weight_constraints": false,
+        "value_choice": "adj_close",
+        "model_name": "CLA", 
+        "optimization": "max_sharpe",  
+        "w_lim": [0.01, 0.4],
+        "scale_factor": 100
+    },
+    "bayesian": {
+        "make_posterior_returns": false,
+        "tau": 0.05,
+        "Q": [0.2, 0.1],
+        "P" : [
+            [0,0,1,0,0],
+            [0,0,0,1,0]
+        ]
+    },
+    "plotting": {
+        "make_plots": false,
+        "save_plots": true
+    },
+    "marketstack_api": {
+        "access_key": "11eaea255a0fa4c2f436638015f87e9b",
+        "endpoint": "http://api.marketstack.com/v2"
+    },
+    "aux_io": {
+        "inputs_file": "./inputs.csv",
+        "date_range": ["2020-01-01", "2025-03-10"]      
+    }
+}
+
